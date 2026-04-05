@@ -1,0 +1,172 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 7%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 12%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 12%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 85% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 16%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 16%;
+    --muted-foreground: 0 0% 55%;
+
+    --accent: 0 85% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 22%;
+    --input: 0 0% 22%;
+    --ring: 0 85% 45%;
+
+    --radius: 0.75rem;
+
+    --gold: 43 96% 56%;
+    --gold-foreground: 0 0% 10%;
+
+    --sidebar-background: 0 0% 10%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 0 85% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 16%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 0 0% 22%;
+    --sidebar-ring: 0 85% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+@layer utilities {
+  .balance-badge {
+    background: hsl(0 85% 38%);
+    color: hsl(0 0% 100%);
+    font-weight: 700;
+    border-radius: 0.25rem;
+    padding: 0.4rem 0.8rem;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    box-shadow: 0 4px 16px hsl(0 85% 38% / 0.5);
+  }
+
+  .quiz-card {
+    background: hsl(0 0% 13%);
+    border: 1px solid hsl(0 0% 22%);
+    border-radius: 1rem;
+    padding: 1.5rem;
+  }
+
+  .option-btn {
+    background: transparent;
+    border: 1.5px solid hsl(0 0% 30%);
+    border-radius: 0.6rem;
+    padding: 1rem 1.2rem;
+    width: 100%;
+    text-align: left;
+    color: hsl(0 0% 95%);
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .option-btn:hover {
+    border-color: hsl(0 85% 45%);
+    background: hsl(0 85% 45% / 0.1);
+  }
+
+  .option-btn.selected {
+    border-color: hsl(0 85% 45%);
+    background: hsl(0 85% 45% / 0.15);
+  }
+
+  .option-btn.correct {
+    border-color: hsl(142 71% 45%);
+    background: hsl(142 71% 45% / 0.15);
+  }
+
+  .option-btn.wrong {
+    border-color: hsl(0 84% 60%);
+    background: hsl(0 84% 60% / 0.15);
+  }
+
+  .btn-red {
+    background: hsl(0 85% 45%);
+    color: hsl(0 0% 100%);
+    font-weight: 700;
+    font-size: 1.05rem;
+    border-radius: 0.5rem;
+    padding: 0.9rem 1.5rem;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-align: center;
+  }
+
+  .btn-red:hover {
+    background: hsl(0 85% 38%);
+    transform: translateY(-1px);
+  }
+
+  .balance-toast {
+    position: fixed;
+    top: 5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: hsl(0 0% 13%);
+    border: 1.5px solid hsl(0 0% 25%);
+    border-radius: 0.75rem;
+    padding: 0.75rem 1.25rem;
+    z-index: 100;
+    animation: slideDown 0.3s ease;
+  }
+
+  @keyframes slideDown {
+    from { opacity: 0; transform: translateX(-50%) translateY(-1rem); }
+    to { opacity: 1; transform: translateX(-50%) translateY(0); }
+  }
+
+  @keyframes balancePop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+    100% { transform: scale(1); }
+  }
+
+  .balance-pop {
+    animation: balancePop 0.4s ease;
+  }
+
+  .progress-bar-fill {
+    background: hsl(0 85% 45%);
+    height: 4px;
+    border-radius: 2px;
+    transition: width 0.5s ease;
+  }
+}

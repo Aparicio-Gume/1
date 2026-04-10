@@ -638,29 +638,29 @@ export default function QuizApp() {
       </div>
 
 {/* Video embed */}
-      <div style={{ ...cardStyle, marginBottom: "1.5rem", padding: "0.75rem" }}>
-        <div id="ifr_69bfbe6c0817c06e8a7b61b9_wrapper" style={{ margin: "0 auto", width: "100%" }}>
-          <div style={{ position: "relative", paddingTop: "56.25%" }} id="ifr_69bfbe6c0817c06e8a7b61b9_aspect">
-            <iframe
-              frameBorder={0}
-              allowFullScreen
-              src="about:blank"
-              id="ifr_69bfbe6c0817c06e8a7b61b9"
-              style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", borderRadius: "0.3rem" }}
-              // Alterado para no-referrer para tentar contornar o bloqueio de domínio "perigoso"
-              referrerPolicy="no-referrer"
-              ref={(el) => {
-                if (el && el.src === "about:blank") {
-                  el.onload = null;
-                  // Nova URL e ID fornecidos por você
-                  const videoUrl = `https://scripts.converteai.net/441d2721-6f8b-4d47-9522-21d00977564f/players/69bfbe6c0817c06e8a7b61b9/v4/embed.html${window.location.search || "?"}&vl=${encodeURIComponent(window.location.href)}`;
-                  el.src = videoUrl;
-                }
-              }}
-            />
-          </div>
-        </div>
-      </div>
+      <!-- Script atualizado -->
+<script type="text/javascript">
+  var s = document.createElement("script");
+  s.src = "https://scripts.converteai.net/lib/js/smartplayer-wc/v4/sdk.js";
+  s.async = true;
+  document.head.appendChild(s);
+</script>
+
+<!-- Novo bloco de vídeo -->
+<div id="ifr_69d8cc650f6865a712c93eb3_wrapper" style="margin: 0 auto; width: 100%;">
+  <div style="position: relative; padding: 56.25% 0 0 0;" id="ifr_69d8cc650f6865a712c93eb3_aspect">
+    <iframe
+      frameborder="0"
+      allowfullscreen
+      src="about:blank"
+      id="ifr_69d8cc650f6865a712c93eb3"
+      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+      referrerpolicy="origin"
+      onload="this.onload=null; this.src='https://scripts.converteai.net/7267fe01-43f2-4749-962a-e2834df00010/players/69d8cc650f6865a712c93eb3/v4/embed.html' + (location.search || '?') + '&vl=' + encodeURIComponent(location.href)">
+    </iframe>
+  </div>
+</div>
+
 
       {/* Comments title */}
       <div style={{ ...cardStyle, marginBottom: "1rem", background: "hsl(0 0% 9%)" }}>

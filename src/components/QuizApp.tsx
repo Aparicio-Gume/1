@@ -620,13 +620,13 @@ export default function QuizApp() {
         </p>
       </div>
 
-      <div id="ifr_69d8cc650f6865a712c93eb3_wrapper" style={{ margin: "0 auto", width: "100%" }}>
-        <div style={{ position: "relative", padding: "56.25% 0 0 0" }} id="ifr_69d8cc650f6865a712c93eb3_aspect">
+      <div id="ifr_69f77106fe543f779058498c_wrapper" style={{ margin: "0 auto", width: "100%" }}>
+        <div style={{ position: "relative", padding: "56.25% 0 0 0" }} id="ifr_69f77106fe543f779058498c_aspect">
           <iframe
             frameBorder="0"
             allowFullScreen
-            src={`https://scripts.converteai.net/7267fe01-43f2-4749-962a-e2834df00010/players/69d8cc650f6865a712c93eb3/v4/embed.html${window.location.search || '?'}&vl=${encodeURIComponent(window.location.href)}`}
-            id="ifr_69d8cc650f6865a712c93eb3"
+            src={`https://scripts.converteai.net/7ac37e0c-38df-459e-b3dc-acf8b499215d/players/69f77106fe543f779058498c/v4/embed.html${window.location.search || '?'}&vl=${encodeURIComponent(window.location.href)}`}
+            id="ifr_69f77106fe543f779058498c"
             style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}
             referrerPolicy="origin"
           >
